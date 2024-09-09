@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/mnt/c/Users/mussh/Documents/Perso/CMake/code/CoursCMake/02_CMake/01_Module/02_ProjetSimple/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/myLib.dir/library/lib.cpp.o -c /mnt/c/Users/mussh/Documents/Perso/CMake/code/CoursCMake/02_CMake/01_Module/02_ProjetSimple/library/lib.cpp",
+  "file": "/mnt/c/Users/mussh/Documents/Perso/CMake/code/CoursCMake/02_CMake/01_Module/02_ProjetSimple/library/lib.cpp"
+},
+{
+  "directory": "/mnt/c/Users/mussh/Documents/Perso/CMake/code/CoursCMake/02_CMake/01_Module/02_ProjetSimple/build",
+  "command": "/usr/bin/g++   -g -o CMakeFiles/Exec.dir/app/main.cpp.o -c /mnt/c/Users/mussh/Documents/Perso/CMake/code/CoursCMake/02_CMake/01_Module/02_ProjetSimple/app/main.cpp",
+  "file": "/mnt/c/Users/mussh/Documents/Perso/CMake/code/CoursCMake/02_CMake/01_Module/02_ProjetSimple/app/main.cpp"
+}
+]
