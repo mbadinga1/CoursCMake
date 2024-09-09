@@ -34,6 +34,6 @@ Les exemples sont exécutés dans un terminal.
 - **Description**: Définit le type de build que CMake va crée en utilisant ces options : Debug, Release, RelWithDebInfo, MinSizeRel.
 - **Exemple**:cmake -DCMAKE_BUILD_TYPE=Debug
 
- ## 7. cmake -D <var>=<value>
+## 7. cmake -D <var>=<value>
 - **Description**: Définit l'état d'une variable cmake pendant le processus de configuration.
 - **Exemple**:cmake .. -DMyOption=ON 
