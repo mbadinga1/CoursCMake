@@ -8,7 +8,5 @@ project(
     VERSION 1.0.0
     LANGUAGES C CXX)
 
-add_library(Librarie STATIC lib.cpp)
-add_executable(Exec main.cpp)
-target_link_libraries(Exec PUBLIC Librarie)
-
+add_subdirectory(app)
+add_subdirectory(src)

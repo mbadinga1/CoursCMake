@@ -6,9 +6,7 @@ cmake_minimum_required(VERSION 3.22)
 project(
     CppProject
     VERSION 1.0.0
+    DESCRIPTION "Conversion de la temperature"
     LANGUAGES C CXX)
 
-add_library(Librarie STATIC lib.cpp)
 add_executable(Exec main.cpp)
-target_link_libraries(Exec PUBLIC Librarie)
-

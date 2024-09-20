@@ -1,3 +1,0 @@
-/mnt/c/Users/mussh/Documents/Perso/CMake/code/CoursCMake/02_CMake/01_Module/01_HelloWorld/build/CMakeFiles/Exec.dir
-/mnt/c/Users/mussh/Documents/Perso/CMake/code/CoursCMake/02_CMake/01_Module/01_HelloWorld/build/CMakeFiles/edit_cache.dir
-/mnt/c/Users/mussh/Documents/Perso/CMake/code/CoursCMake/02_CMake/01_Module/01_HelloWorld/build/CMakeFiles/rebuild_cache.dir
