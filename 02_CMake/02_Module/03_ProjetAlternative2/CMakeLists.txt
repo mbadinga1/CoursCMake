@@ -1,3 +1,4 @@
+
 # creer un dossier build  et entrer dans le dossier 
 # mkdir build && cd build
 # lancer la config
@@ -12,20 +13,12 @@ project(CppProject
         DESCRIPTION "Conversion de temperature"
         LANGUAGES C CXX
         )
-
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set(EXEC_NAME Executable)
-set(LIB_NAME LibK)
-set(LIB_FAHREN LibF)
-
-option(COMPILE_APP "compile code application" OFF)
-
-if(COMPILE_APP)
-        add_subdirectory(app)
-endif()
+set(LIB_INCLUDES Library)
+        
+add_subdirectory(app)
 add_subdirectory(src)
-
-

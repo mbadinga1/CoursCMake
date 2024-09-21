@@ -1,4 +1,4 @@
-#include "conversion.h"
+#include "kelvin.h"
 
 /*
 Formule: K = °C + zDegre
@@ -6,14 +6,11 @@ zDegre = 273,15
 */
 double convCelsiusEnKevin(const double tempCelsius)
 {
-    return (tempCelsius - zDegre);
+    return (tempCelsius + zDegre);
 }
 
-/*
-Formule:  °C = K − zDegre
-zDegre = 273,15
-*/
-double convKelvinEnCelsius(const double tempKelvin)
+void printTemperature(const double C, const double K)
 {
-    return (tempKelvin - zDegre);
+    std::cout << "Conversion de " << C <<"° c en K égal à " << K << std::endl; 
 }
+
