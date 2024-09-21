@@ -28,7 +28,7 @@ Les exemples sont exécutés dans un terminal.
    ```
 **Options:**  
     ```bash
-    --config <Debug|Release> : Spécifie la configuration du build.
+    --config <Debug|Release> : Spécifie la configuration du build.  
     -- -jN : Spécifie le nombre de tâches parallèles pour une compilation plus rapide.
     ```
 
