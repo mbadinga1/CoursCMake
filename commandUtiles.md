@@ -26,9 +26,11 @@ Les exemples sont exécutés dans un terminal.
    ```bash 
   cmake --build build
    ```
-**Options:**
+**Options:**  
+    ```bash
     --config <Debug|Release> : Spécifie la configuration du build.
     -- -jN : Spécifie le nombre de tâches parallèles pour une compilation plus rapide.
+    ```
 
 ## 4. cmake --install <build_dir>
   - **Description**: Installe le projet dans l'emplacement spécifié
