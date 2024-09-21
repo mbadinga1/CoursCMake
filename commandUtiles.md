@@ -8,7 +8,7 @@ Les exemples sont exécutés dans un terminal.
 ## 1. `cmake -S <source> -B <build>`
 - **Description**: Configure un projet en spécifiant le répertoire source (`-S`) où se trouve le fichier `CMakeLists.txt` et le répertoire de build (`-B`) où les fichiers de build seront placés.
 - **Exemple**:   
-   cmake -S . -B build
+   #####cmake -S . -B build
 
 ## 2. cmake ..
 - **Description**: Permet de configurer le projet à partir du répertoire build en pointant le répertoire source.
