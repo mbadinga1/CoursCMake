@@ -1,2 +1,0 @@
-/usr/bin/ar qc libabi_compat_diag_off.a CMakeFiles/abi_compat_diag_off.dir/diag_off.cpp.o
-/usr/bin/ranlib libabi_compat_diag_off.a

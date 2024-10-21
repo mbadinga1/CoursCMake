@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/abi_config_default.dir/default.cpp.o -o abi_config_default  ../libabi_compat_main.a 

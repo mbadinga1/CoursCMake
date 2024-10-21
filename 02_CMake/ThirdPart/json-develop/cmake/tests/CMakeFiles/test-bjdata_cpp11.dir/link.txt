@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/test-bjdata_cpp11.dir/src/unit-bjdata.cpp.o CMakeFiles/test_main.dir/src/unit.cpp.o -o test-bjdata_cpp11 

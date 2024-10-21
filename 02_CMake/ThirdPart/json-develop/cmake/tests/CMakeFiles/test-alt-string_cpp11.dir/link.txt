@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/test-alt-string_cpp11.dir/src/unit-alt-string.cpp.o CMakeFiles/test_main.dir/src/unit.cpp.o -o test-alt-string_cpp11 

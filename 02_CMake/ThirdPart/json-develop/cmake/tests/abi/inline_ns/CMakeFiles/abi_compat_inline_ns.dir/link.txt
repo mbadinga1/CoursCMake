@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/abi_compat_inline_ns.dir/use_v3_10_5.cpp.o CMakeFiles/abi_compat_inline_ns.dir/use_current.cpp.o -o abi_compat_inline_ns  ../libabi_compat_main.a 

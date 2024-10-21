@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/test-custom-base-class_cpp11.dir/src/unit-custom-base-class.cpp.o CMakeFiles/test_main.dir/src/unit.cpp.o -o test-custom-base-class_cpp11 
