@@ -1,0 +1,2 @@
+/usr/bin/ar qc libabi_compat_diag_on.a CMakeFiles/abi_compat_diag_on.dir/diag_on.cpp.o
+/usr/bin/ranlib libabi_compat_diag_on.a

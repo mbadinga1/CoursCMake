@@ -20,5 +20,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(EXEC_NAME Executable)
 set(LIB_INCLUDES Library)
         
-add_subdirectory(app)
+option(COMPILE_APP "compile code application" OFF)
+
+if(COMPILE_APP)
+       add_subdirectory(app)
+endif()
+
 add_subdirectory(src)

@@ -17,9 +17,13 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+
 set(EXEC_NAME Executable)
 set(LIB_KELVIN LibK)
 set(LIB_FAHREN LibF)
         
-add_subdirectory(app)
-add_subdirectory(src)
+option(COMPILE_APP "compile code application" OFF)
+
+if(COMPILE_APP)
+       add_subdirectory(app)
+endif()add_subdirectory(src)

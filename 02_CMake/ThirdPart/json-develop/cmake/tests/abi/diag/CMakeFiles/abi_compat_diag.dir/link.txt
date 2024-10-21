@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/abi_compat_diag.dir/diag.cpp.o -o abi_compat_diag  ../libabi_compat_main.a libabi_compat_diag_on.a libabi_compat_diag_off.a 

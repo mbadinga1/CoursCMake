@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test-binary_formats_cpp11.dir/src/unit-binary_formats.cpp.o CMakeFiles/test_main.dir/src/unit.cpp.o -o test-binary_formats_cpp11 

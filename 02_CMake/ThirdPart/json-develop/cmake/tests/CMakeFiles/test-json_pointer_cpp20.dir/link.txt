@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test-json_pointer_cpp20.dir/src/unit-json_pointer.cpp.o CMakeFiles/test_main.dir/src/unit.cpp.o -o test-json_pointer_cpp20 
