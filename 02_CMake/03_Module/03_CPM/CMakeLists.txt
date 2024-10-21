@@ -24,17 +24,24 @@ set(INSTALL_PATH "/usr/local/" CACHE PATH "chemin pour installer le binaire")
 
 option(COMPILE_APP "compile code application" ON)
 option(ENABLE_DEBUG "Activer le debug" OFF)
+option(ENABLE_CPM "enable cmp" ON)
 
 list(APPEND CMAKE_PREFIX_PATH  "${CMAKE_SOURCE_DIR}/external/nlohmann_json/cmake")
 find_package(nlohmann_json 3.11.3 REQUIRED)
 
-include(FetchContent)
-FetchContent_Declare(
-        fmt
-        GIT_REPOSITORY https://github.com/fmtlib/fmt
-        GIT_TAG 11.0.2
-        GIT_SHALLOW TRUE)
-FetchContent_MakeAvailable(fmt)
+include(cmake/CPM.cmake)
+if (ENABLE_CPM)
+        CPMAddPackage("gh:fmtlib/fmt#11.0.2")
+        CPMAddPackage("gh:catchorg/Catch2@3.4.0")
+else()
+        include(FetchContent)
+        FetchContent_Declare(
+                fmt
+                GIT_REPOSITORY https://github.com/fmtlib/fmt
+                GIT_TAG 11.0.2
+                GIT_SHALLOW TRUE)
+        FetchContent_MakeAvailable(fmt)
+endif()
 
 
 if(ENABLE_DEBUG)
