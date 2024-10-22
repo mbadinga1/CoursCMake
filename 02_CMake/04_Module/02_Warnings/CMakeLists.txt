@@ -28,11 +28,14 @@ option(COMPILE_APP "compile code application" ON)
 option(ENABLE_DEBUG "Activer le debug" OFF)
 option(ENABLE_CPM "enable cmp" ON)
 option(ENABLE_TEST "enable testing" ON)
+option(ENABLE_WARNINGS "enable warnings" ON)
+
+
 
 if (ENABLE_CPM)
         include(cmake/CPM.cmake)
         CPMAddPackage("gh:fmtlib/fmt#11.0.2")
-        CPMAddPackage("gh:nlohmann/json@3.10.5")
+        CPMAddPackage("gh:nlohmann/json@3.11.3")
         if(ENABLE_TEST)
                 CPMAddPackage("gh:catchorg/Catch2@3.7.1")
         endif()
@@ -62,6 +65,28 @@ else()
         endif()
 endif()
 
+# add warnings
+if (ENABLE_WARNINGS)
+        message("Setting warning")
+        set(WARNING_MSVC 
+        /W4
+        /Wall
+        /permissive
+        )
+        set(GCC_CLANG_WARNINGS
+        -Wall
+        -Wextra
+       )
+
+        if(CMAKE_CXX_COMPILER_ID MATCHES MSVC)
+                message("in MSCV compiler")
+                set(COMPILER_WARNINGS ${WARNING_MSVC})   
+        elseif(CMAKE_CXX_COMPILER_ID MATCHES Clang)
+                set(COMPILER_WARNINGS ${GCC_CLANG_WARNINGS})
+        elseif(CMAKE_CXX_COMPILER_ID MATCHES GNU)   
+                set(COMPILER_WARNINGS ${GCC_CLANG_WARNINGS})
+        endif()
+endif()
 
 if(ENABLE_DEBUG)
         message(STATUS "Mode debug activé")
