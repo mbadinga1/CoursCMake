@@ -49,19 +49,19 @@ else()
         FetchContent_MakeAvailable(fmt)
 
         FetchContent_Declare(
-                nlohmann_json
-                GIT_REPOSITORY https://github.com/nlohmann/json
-                GIT_TAG 3.11.3
-                GIT_SHALLOW TRUE)
+        nlohmann_json
+        GIT_REPOSITORY https://github.com/nlohmann/json
+        GIT_TAG v3.11.3
+        GIT_SHALLOW TRUE)
         FetchContent_MakeAvailable(nlohmann_json)
-        
-        if(ENABLE_TEST)
-                FetchContent_Declare(
-                        Catch2
-                        GIT_REPOSITORY git@github.com:catchorg/Catch2
-                        GIT_TAG 3.7.1
-                        GIT_SHALLOW TRUE)
-                FetchContent_MakeAvailable(Catch2)
+
+        if(${ENABLE_TEST})
+        FetchContent_Declare(
+                Catch2
+                GIT_REPOSITORY https://github.com/catchorg/Catch2
+                GIT_TAG v3.5.3
+                GIT_SHALLOW TRUE)
+        FetchContent_MakeAvailable(Catch2)
         endif()
 endif()
 
