@@ -1,4 +1,4 @@
-#Explication avec target_link_libraries
+# Explication avec target_link_libraries
 
 target_link_libraries(MyExecutable PRIVATE MyLibrary)
 Ici, MyLibrary est lié uniquement à MyExecutable, 
