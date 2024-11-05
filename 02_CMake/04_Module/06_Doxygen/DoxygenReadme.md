@@ -2,9 +2,9 @@
 ## Installation dans l'utilisation de cmake
 1 - Ajouter l'extension **Doxygen Documentation Generator**  
 2- Lancer (pour générer le fichier de configuration):
-  `doxygen -g`
-  ajouter des commentaires si nécessaires pour personnaliser la configuration.
-3- Lancer : 
+  `doxygen -g`  
+  ajouter des commentaires si nécessaires pour personnaliser la configuration.    
+3- Lancer :   
   `doxygen`  
   Un fichier de html est généré contenant la docs.   
   
