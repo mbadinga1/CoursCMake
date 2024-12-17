@@ -1,4 +1,2 @@
 
-/02_CMake/04_Module/04_ExportEtInstallation/install
-02_CMake/04_Module/04_ExportEtInstallation/install/bin/LibF.dll
-02_CMake/04_Module/04_ExportEtInstallation/install/bin/LibK.dll
+build/
