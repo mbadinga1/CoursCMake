@@ -1,7 +1,7 @@
 # Pojet Template avec CMake
 
 
-**Projet template du cours CMake Clarifé - Maîtrisez vos Projets C/C++ , Tests et Outils**.
+**Projet template du cours CMake Maîtrisez vos Projets C/C++ de Débutants à Intermédiaires**.
 Lien du cours sur Udemy: [Lien]()
 
 Dans ce projet, vous avez:
