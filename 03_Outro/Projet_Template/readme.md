@@ -60,7 +60,7 @@ Dans ce projet, vous avez:
 - Doxygen
 - Conan or VCPKG
 - MSVC 2017 (or higher), G++9 (or higher), Clang++9 (or higher)
-- Optional: Code Coverage (only on GNU|Clang): gcovr
-- Optional: Makefile, Doxygen, Conan, VCPKG
+- Code Coverage (only on GNU|Clang): gcovr
+- Makefile, Doxygen, Conan, VCPKG
 
 
