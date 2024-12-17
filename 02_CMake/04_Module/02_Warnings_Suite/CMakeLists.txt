@@ -29,6 +29,7 @@ option(ENABLE_DEBUG "Activer le debug" OFF)
 option(ENABLE_CPM "enable cmp" ON)
 option(ENABLE_TEST "enable testing" ON)
 option(ENABLE_WARNINGS "enable warnings" ON)
+option(WARNING_ERRORS "enable errors warnings"  OFF)
 
 
 
@@ -37,7 +38,9 @@ if (ENABLE_CPM)
         CPMAddPackage("gh:fmtlib/fmt#11.0.2")
         CPMAddPackage("gh:nlohmann/json@3.11.3")
         if(ENABLE_TEST)
-                CPMAddPackage("gh:catchorg/Catch2@3.7.1")
+                CPMAddPackage("gh:catchorg/Catch2@3.4.0")
+                message(STATUS "Catch2 source directory: ${Catch2_SOURCE_DIR}")
+                list(APPEND CMAKE_MODULE_PATH ${Catch2_SOURCE_DIR}/extras)
         endif()
 else()
         include(FetchContent)
@@ -65,8 +68,9 @@ else()
         endif()
 endif()
 
-if (ENABLE_WARNINGS)
-        include(cmake/Avertissement.cmake)
+#add warnings
+if(ENABLE_WARNINGS)
+        include(./cmake/Avertissement.cmake)
 endif()
 
 if(ENABLE_DEBUG)

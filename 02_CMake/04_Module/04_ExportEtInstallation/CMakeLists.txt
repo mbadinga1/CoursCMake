@@ -22,59 +22,32 @@ set(EXEC_NAME Executable)
 set(LIB_NAME LibK)
 set(LIB_FAHREN LibF)
 
-# set(INSTALL_PATH "/usr/local/" CACHE PATH "chemin pour installer le binaire")
-set(INSTALL_PATH "${CMAKE_CURRENT_SOURCE_DIR}/install" CACHE PATH "chemin pour installer le binaire")
-# if(NOT CMAKE_INSTALL_PREFIX)
-#   set(CMAKE_INSTALL_PREFIX ${INSTALL_PATH})
-# endif()
+set(INSTALL_PATH "${CMAKE_CURRENT_SOURCE_DIR}/install" CACHE PATH "chemin pour installer les libs")
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/)
 
-# option(COMPILE_APP "compile code application" ON)
 option(ENABLE_DEBUG "Activer le debug" OFF)
-option(ENABLE_CPM "enable cmp" OFF)
-option(ENABLE_FETCHCONTENT "enable cmp" ON)
-
+option(ENABLE_CPM "enable cmp" ON)
 option(ENABLE_TEST "enable testing" ON)
 option(ENABLE_WARNINGS "enable warnings" ON)
-
+option(WARNING_ERRORS "enable errors warnings"  OFF)
+option(ENABLE_FETCHCONTENT "enable fetch" ON)
 
 if (ENABLE_CPM)
-        message("using CPM")
         include(CPM)
         CPMAddPackage("gh:fmtlib/fmt#11.0.2")
         CPMAddPackage("gh:nlohmann/json@3.11.3")
         if(ENABLE_TEST)
-                CPMAddPackage("gh:catchorg/Catch2@3.7.1")
+                CPMAddPackage("gh:catchorg/Catch2@3.4.0")
+                message(STATUS "Catch2 source directory: ${Catch2_SOURCE_DIR}")
+                list(APPEND CMAKE_MODULE_PATH ${Catch2_SOURCE_DIR}/extras)
         endif()
-elseif(ENABLE_FETCHCONTENT)
-        include(Fetchlib)
-        fetchContentFunc(ENABLE_FETCHCONTENT ENABLE_TEST)
-        # include(FetchContent)
-        # FetchContent_Declare(
-        #         fmt
-        #         GIT_REPOSITORY https://github.com/fmtlib/fmt
-        #         GIT_TAG 11.0.2
-        #         GIT_SHALLOW TRUE)
-        # FetchContent_MakeAvailable(fmt)
-    
-        # FetchContent_Declare(
-        #     nlohmann_json
-        #     GIT_REPOSITORY https://github.com/nlohmann/json
-        #     GIT_TAG v3.11.3
-        #     GIT_SHALLOW TRUE)
-        # FetchContent_MakeAvailable(nlohmann_json)
-        
-        # if(${ENABLE_TEST})
-        #     FetchContent_Declare(
-        #         Catch2
-        #         GIT_REPOSITORY https://github.com/catchorg/Catch2
-        #         GIT_TAG v3.5.3
-        #         GIT_SHALLOW TRUE)
-        #     FetchContent_MakeAvailable(Catch2)
-        # endif()
+else()
+       include(Fetchlib)
+       fetchContentFunc(ENABLE_FETCHCONTENT, ENABLE_TEST)
 endif()
 
-if (ENABLE_WARNINGS)
+#add warnings
+if(ENABLE_WARNINGS)
         include(Avertissement)
 endif()
 
@@ -87,9 +60,7 @@ else()
 endif()
 
 add_subdirectory(configure)
-# if(COMPILE_APP)
 add_subdirectory(app)
-# endif()
 add_subdirectory(src)
 
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)

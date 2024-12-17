@@ -1,10 +1,10 @@
-# Installation de Conan Package Manager
+## Installation de Conan Package Manager
 
 Site officiel [ici](https://docs.conan.io/2/).
 
 Database [ici](https://conan.io/center/).
 
-# Guide Installation 
+### Guide Installation 
 
 1. Installation Python (3.7+)
 2. Type ``pip install --user -U conan`` dans le terminal

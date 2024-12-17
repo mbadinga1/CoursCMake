@@ -5,5 +5,5 @@ target_link_libraries(${EXEC_NAME} PUBLIC
                                    nlohmann_json::nlohmann_json
                                    fmt::fmt
                                    )
-target_compile_options(${EXEC_NAME} PRIVATE ${COMPILER_WARNINGS})
+target_compile_options(${EXEC_NAME} PRIVATE ${WARNING_COMPILER})
 install(TARGETS ${EXEC_NAME} DESTINATION ${INSTALL_PATH})

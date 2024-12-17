@@ -17,25 +17,22 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set(DCMAKE_BUILD_TYPE Debug)
 set(EXEC_NAME Executable)
 set(LIB_NAME LibK)
 set(LIB_FAHREN LibF)
-
 set(INSTALL_PATH "/usr/local/" CACHE PATH "chemin pour installer le binaire")
 
 option(COMPILE_APP "compile code application" ON)
 option(ENABLE_DEBUG "Activer le debug" OFF)
 option(ENABLE_CPM "enable cmp" ON)
-option(ENABLE_TEST "enable testing" ON)
+option(ENABLE_TESTING "enable testing" ON)
 
+include(cmake/CPM.cmake)
 if (ENABLE_CPM)
-        include(cmake/CPM.cmake)
         CPMAddPackage("gh:fmtlib/fmt#11.0.2")
         CPMAddPackage("gh:nlohmann/json@3.10.5")
-        if(ENABLE_TEST)
+        if(ENABLE_TESTING)
                 CPMAddPackage("gh:catchorg/Catch2@3.4.0")
-                message(STATUS "Catch2 source directory: ${Catch2_SOURCE_DIR}")
                 list(APPEND CMAKE_MODULE_PATH ${Catch2_SOURCE_DIR}/extras)
         endif()
 else()
@@ -48,20 +45,11 @@ else()
         FetchContent_MakeAvailable(fmt)
 
         FetchContent_Declare(
-        nlohmann_json
-        GIT_REPOSITORY https://github.com/nlohmann/json
-        GIT_TAG v3.11.3
-        GIT_SHALLOW TRUE)
-        FetchContent_MakeAvailable(nlohmann_json)
-
-        if(${ENABLE_TEST})
-        FetchContent_Declare(
-                Catch2
-                GIT_REPOSITORY https://github.com/catchorg/Catch2
-                GIT_TAG v3.5.3
+                nlohmann_json
+                GIT_REPOSITORY https://github.com/nlohmann/json
+                GIT_TAG v3.11.3
                 GIT_SHALLOW TRUE)
-        FetchContent_MakeAvailable(Catch2)
-        endif()
+                FetchContent_MakeAvailable(nlohmann_json)
 endif()
 
 
@@ -79,11 +67,11 @@ if(COMPILE_APP)
 endif()
 add_subdirectory(src)
 
-if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
-    message("adding CTest")
-    include(CTest)
-    enable_testing()
-    add_subdirectory(tests)
+if (CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
+        message("adding Ctest")
+        include(CTest)
+        enable_testing()
+        add_subdirectory(tests)
 endif()
 
 

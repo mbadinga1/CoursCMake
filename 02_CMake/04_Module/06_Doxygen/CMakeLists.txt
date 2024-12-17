@@ -32,7 +32,7 @@ option(ENABLE_TEST "enable testing" OFF)
 option(ENABLE_WARNINGS "enable warnings" OFF)
 option(ENABLE_OPTIMIZATION "enable optimization" OFF)
 
-#doxygen
+# inclusion doxygen
 include(Documents)
 
 if (ENABLE_CPM)

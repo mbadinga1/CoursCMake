@@ -6,6 +6,6 @@ target_link_libraries(${EXEC_NAME} PUBLIC
                                    fmt::fmt
                                    )
 if(ENABLE_WARNINGS)
-    enableWarnings(${EXEC_NAME} ON ON)
+    enableWarnings(${EXEC_NAME} ON OFF)
 endif()
 install(TARGETS ${EXEC_NAME} DESTINATION ${INSTALL_PATH})

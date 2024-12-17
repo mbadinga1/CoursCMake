@@ -37,7 +37,9 @@ if (ENABLE_CPM)
         CPMAddPackage("gh:fmtlib/fmt#11.0.2")
         CPMAddPackage("gh:nlohmann/json@3.11.3")
         if(ENABLE_TEST)
-                CPMAddPackage("gh:catchorg/Catch2@3.7.1")
+                CPMAddPackage("gh:catchorg/Catch2@3.4.0")
+                message(STATUS "Catch2 source directory: ${Catch2_SOURCE_DIR}")
+                list(APPEND CMAKE_MODULE_PATH ${Catch2_SOURCE_DIR}/extras)
         endif()
 else()
         include(FetchContent)
@@ -65,26 +67,30 @@ else()
         endif()
 endif()
 
-# add warnings
-if (ENABLE_WARNINGS)
-        message("Setting warning")
-        set(WARNING_MSVC 
-        /W4
-        /Wall
-        /permissive
+#add warnings
+if(ENABLE_WARNINGS)
+        message("Setting warnings")
+        set(WARNING_MSVC
+                /W4
+                /Wall
+                /permissive
         )
-        set(GCC_CLANG_WARNINGS
-        -Wall
-        -Wextra
-       )
 
+        set(WARNING_GCC_CLANG
+                -Wall
+                -Wextra
+        )
         if(CMAKE_CXX_COMPILER_ID MATCHES MSVC)
-                message("in MSCV compiler")
-                set(COMPILER_WARNINGS ${WARNING_MSVC})   
+                message("In MSVC compiler")
+                set(WARNING_COMPILER ${WARNING_MSVC})
         elseif(CMAKE_CXX_COMPILER_ID MATCHES Clang)
-                set(COMPILER_WARNINGS ${GCC_CLANG_WARNINGS})
-        elseif(CMAKE_CXX_COMPILER_ID MATCHES GNU)   
-                set(COMPILER_WARNINGS ${GCC_CLANG_WARNINGS})
+                message("In Clang compiler")
+                set(WARNING_COMPILER ${WARNING_GCC_CLANG})
+        elseif(CMAKE_CXX_COMPILER_ID MATCHES GNU)
+                message("In GCC compiler")
+                set(WARNING_COMPILER ${WARNING_GCC_CLANG})
+        else()
+                message("No compiler")
         endif()
 endif()
 

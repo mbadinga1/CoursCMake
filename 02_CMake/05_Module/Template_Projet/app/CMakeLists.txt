@@ -1,9 +1,15 @@
 
+include_directories(include)
+find_package(PythonLibs REQUIRED)
+include_directories(${PYTHON_INCLUDE_DIRS})
+
 add_executable(${EXEC_NAME} main.cpp)
+
 target_link_libraries(${EXEC_NAME} PUBLIC 
                                    ${LIB_NAME} ${LIB_FAHREN} 
                                    nlohmann_json::nlohmann_json
                                    fmt::fmt
+                                   ${PYTHON_LIBRARIES}
                                    )
 if(ENABLE_WARNINGS)
     enableWarnings(${EXEC_NAME} OFF OFF)

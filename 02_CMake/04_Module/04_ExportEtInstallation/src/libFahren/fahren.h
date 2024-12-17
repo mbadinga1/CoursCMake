@@ -1,16 +1,15 @@
 #pragma once
 
-// Gestion des import/export selon la plateforme et l'usage
-#if defined(_WIN32)
-#  if defined(EXPORT_MYLIBFAHREN)
-#    define DECLSPEC __declspec(dllexport)
-#  else
-#    define DECLSPEC __declspec(dllimport)
-#  endif
-#else // non windows
-#  define DECLSPEC
+// gestion export/import 
+#if defined (_WIN32) // windows
+#   if defined(EXPORT_MYLIBFAHREN)
+#        define DECLSPEC __declspec(dllexport)
+#   else
+#       define DECLSPEC  __declspec(dllimport) 
+#   endif
+#else //not windows
+#   define DECLSPEC
 #endif
-
 #include <iostream>
 
 const double cDegre = 459.67; 

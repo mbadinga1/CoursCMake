@@ -1,16 +1,18 @@
-# creer un dossier build  et entrer dans le dossier 
+#lancer le build
+# creer un dossier build et aller dans le dossier 
 # mkdir build && cd build
-# lancer la config
+# configurer et build
 # cmake ..
-# lancer build 
-# make ou cmake --build . 
-# lancer l'executable
+# make ou cmake --build .
+# lancer executable
 # ./Exec
 
+
 cmake_minimum_required(VERSION 3.22)
-project(CppProject
+project(TemperatureProjet 
         VERSION 1.0.0
-        DESCRIPTION "Conversion de temperature"
+        DESCRIPTION "Conversion de température"
         LANGUAGES C CXX
         )
 add_executable(Exec main.cpp)
+
