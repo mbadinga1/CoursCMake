@@ -1,0 +1,15 @@
+{
+    // Active le formatage automatique à l'enregistrement
+    "editor.formatOnSave": true,
+    // Configure cmake-format comme formateur pour les fichiers CMake
+    "[cmake]": {
+        "editor.defaultFormatter": "cheshirekow.cmake-format"
+    },
+    // Chemin explicite vers cmake-format si nécessaire
+    "cmake-format.path": "/home/lbadinga/.local/bin/cmake-format",
+    // Options personnalisées pour cmake-format
+    "cmake.formatArgs": [
+        "-c",
+        "${workspaceFolder}/.cmake-format.yaml"
+    ]
+}
