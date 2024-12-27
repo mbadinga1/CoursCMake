@@ -33,7 +33,7 @@ option(ENABLE_FETCHCONTENT "enable cmp" ON)
 option(ENABLE_TEST "enable testing" OFF)
 option(ENABLE_WARNINGS "enable warnings" OFF)
 option(ENABLE_OPTIMIZATION "enable optimization" OFF)
-option(ENABLE_CLANG_FORMAT "enable Clang Format" ON)
+option(ENABLE_CLANG_FORMAT "enable Clang Format" OFF)
 option(ENABLE_CMAKE_FORMAT "enable CMake Format" ON)
 
 option(ENABLE_TESTING "enable test" ON)
@@ -42,6 +42,9 @@ include(Documents)
 
 #format
 include(outils)
+
+ajout_clang_format()
+ajout_cmake_format()
 
 if(ENABLE_CPM)
     message("using CPM")

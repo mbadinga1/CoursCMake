@@ -1,2 +1,4 @@
-add_library(${LIB_KELVIN} src/fahren.cpp)
-target_include_directories(${LIB_KELVIN} PUBLIC inc)
+set(LIB_SOURCES fahren.cpp)
+set(LIB_INCLUDES fahren.h)
+add_library(${LIB_FAHREN} STATIC ${LIB_SOURCES} ${LIB_INCLUDES})
+target_include_directories(${LIB_FAHREN} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

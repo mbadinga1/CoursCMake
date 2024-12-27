@@ -14,7 +14,7 @@ Générer le fichier .clang-format
 clang-format -style=llvm -dump-config > .clang-format
 ```
 
-Cmake-format:  Permet de formater les fichiers CMakeLists.txt
+Cmake-format:  Permet de formater les fichiers CMakeLists.txt et les fichiers .cmake
 ```cmd
 pip install cmake-format
 ```

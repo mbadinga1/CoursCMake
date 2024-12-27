@@ -209,8 +209,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 //Path to a program.
 CMAKE_STRIP:FILEPATH=/usr/bin/arm-linux-gnueabihf-strip
 
-//The CMake toolchain file
-CMAKE_TOOLCHAIN_FILE:FILEPATH=/mnt/c/Users/mussh/Documents/Perso/CMake/code/CoursCMake/02_CMake/06_Extras/03_CrossCompilation/toolchains/toolchain-arm32.cmake
+//No help, variable specified on the command line.
+CMAKE_TOOLCHAIN_FILE:UNINITIALIZED=toolchains/toolchain-arm32.cmake
 
 //If this value is on, makefiles will be generated without the
 // .SILENT directive, and all commands will be echoed to the console

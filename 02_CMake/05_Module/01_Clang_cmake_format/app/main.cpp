@@ -98,15 +98,15 @@ int main(void) {
     std::cout << nom_projet << std::endl;
     std::cout << version_projet << std::endl;
 
-    double C = 22.15;
+        double C = 22.15;
     double K = convCelsiusEnKevin(C);
-    printTemperature(C, K);
+       printTemperature(C, K);
 
     double F = convKelvinEnFahrenheit(K);
-    printTemperatureF(K, F);
-  } catch (const std::exception &e) {
+        printTemperatureF(K, F);
+  }     catch (const std::exception &e) {
     std::cerr << "exception: " << e.what() << std::endl;
   }
 
-  return EXIT_SUCCESS;
+      return EXIT_SUCCESS;
 }

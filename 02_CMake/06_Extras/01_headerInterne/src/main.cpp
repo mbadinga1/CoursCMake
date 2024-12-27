@@ -17,7 +17,7 @@ int main (void)
 
 
     int width, height, channels;
-    unsigned char* img = stbi_load("Data-structure-of-RGB-images.png", &width, &height, &channels, 0);
+    unsigned char* img = stbi_load("/mnt/c/Users/mussh/Documents/Perso/CMake/code/CoursCMake/02_CMake/06_Extras/01_headerInterne/src/Data-structure-of-RGB-images.png", &width, &height, &channels, 0);
     
     if (img == nullptr) {
         std::cout << "Error loading image: " << stbi_failure_reason() << std::endl;

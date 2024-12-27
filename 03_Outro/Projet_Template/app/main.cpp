@@ -88,7 +88,7 @@ int main (void)
         plt::plot(tempSick, "r");
         plt::xlabel("Dates");
         plt::ylabel("Temperature");
-        plt::title("Temperature Comparison (Celsius vs Kelvin)");
+        plt::title("Temperature Comparaison (Celsius vs Kelvin)");
         plt::legend();
         plt::save("./Temperature_kelvin.png");
         // plt::show();
