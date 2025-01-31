@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Cpp Project:  Fichier source de /mnt/c/Users/mussh/Documents/Perso/CMake/code/CoursCMake/02_CMake/04_Module/06_Doxygen/src/libFahren/fahren.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Cpp Project
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_33aacbc53ce3dc6c544b8ed167a5048d.html">libFahren</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">fahren.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="fahren_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Gestion des import/export selon la plateforme et l&#39;usage</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#if defined(_WIN32)</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#  if defined(EXPORT_MYLIBFAHREN)</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#    define DECLSPEC __declspec(dllexport)</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#  else</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#    define DECLSPEC __declspec(dllimport)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#  endif</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#else </span><span class="comment">// non windows</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="fahren_8h.html#aa4c7a931f4a968f818b2a1b10a432185">   11</a></span>&#160;<span class="preprocessor">#  define DECLSPEC</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="fahren_8h.html#a3f5bfe95522d7b6ee33833b0f296be13">   16</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="fahren_8h.html#a3f5bfe95522d7b6ee33833b0f296be13">cDegre</a> = 459.67; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="fahren_8h.html#a2091cd7d80fdd31762020bce86138587">   17</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="fahren_8h.html#a2091cd7d80fdd31762020bce86138587">coeff</a> = 1.8; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">double</span> <a class="code" href="fahren_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="code" href="fahren_8h.html#a651058cf88cbeadd75a501113f22f018">convKelvinEnFahrenheit</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> tempKelvin); </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> <a class="code" href="fahren_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a> <a class="code" href="fahren_8h.html#a961b4ee7520cc2642c1f85cdb7fe93b6">printTemperatureF</a>(<span class="keyword">const</span> <span class="keywordtype">double</span> K, <span class="keyword">const</span> <span class="keywordtype">double</span> F);</div>
+<div class="ttc" id="afahren_8h_html_a2091cd7d80fdd31762020bce86138587"><div class="ttname"><a href="fahren_8h.html#a2091cd7d80fdd31762020bce86138587">coeff</a></div><div class="ttdeci">const double coeff</div><div class="ttdef"><b>Definition:</b> fahren.h:17</div></div>
+<div class="ttc" id="afahren_8h_html_a3f5bfe95522d7b6ee33833b0f296be13"><div class="ttname"><a href="fahren_8h.html#a3f5bfe95522d7b6ee33833b0f296be13">cDegre</a></div><div class="ttdeci">const double cDegre</div><div class="ttdef"><b>Definition:</b> fahren.h:16</div></div>
+<div class="ttc" id="afahren_8h_html_a651058cf88cbeadd75a501113f22f018"><div class="ttname"><a href="fahren_8h.html#a651058cf88cbeadd75a501113f22f018">convKelvinEnFahrenheit</a></div><div class="ttdeci">double DECLSPEC convKelvinEnFahrenheit(const double tempKelvin)</div><div class="ttdoc">fonction conversion Kelvin en Fahrenheit</div><div class="ttdef"><b>Definition:</b> fahren.cpp:14</div></div>
+<div class="ttc" id="afahren_8h_html_a961b4ee7520cc2642c1f85cdb7fe93b6"><div class="ttname"><a href="fahren_8h.html#a961b4ee7520cc2642c1f85cdb7fe93b6">printTemperatureF</a></div><div class="ttdeci">void DECLSPEC printTemperatureF(const double K, const double F)</div><div class="ttdef"><b>Definition:</b> fahren.cpp:20</div></div>
+<div class="ttc" id="afahren_8h_html_aa4c7a931f4a968f818b2a1b10a432185"><div class="ttname"><a href="fahren_8h.html#aa4c7a931f4a968f818b2a1b10a432185">DECLSPEC</a></div><div class="ttdeci">#define DECLSPEC</div><div class="ttdef"><b>Definition:</b> fahren.h:11</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

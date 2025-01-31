@@ -1,0 +1,36 @@
+#include "kelvin.h"
+#include "fahren.h"
+
+#include <fstream>
+#include <nlohmann/json.hpp>
+using json = nlohmann::json;
+
+int main (void)
+{
+json j2 = {
+  {"pi", 3.141},
+  {"happy", true},
+  {"name", "Niels"},
+  {"nothing", nullptr},
+  {"answer", {
+    {"everything", 42}
+  }},
+  {"list", {1, 0, 2}},
+  {"object", {
+    {"currency", "USD"},
+    {"value", 42.99}
+  }}
+};
+    std::ofstream o("pretty.json");
+    o << std::setw(4) << j2 << std::endl;
+    double C = 22.15; 
+    double K = convCelsiusEnKevin(C); 
+    printTemperature(C, K); 
+
+    double F = convKelvinEnFahrenheit(K); 
+    printTemperatureF(K, F); 
+
+
+    return EXIT_SUCCESS; 
+
+}

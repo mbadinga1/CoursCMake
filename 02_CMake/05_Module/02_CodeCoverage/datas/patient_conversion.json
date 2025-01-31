@@ -1,0 +1,51 @@
+{
+    "day1": {
+        "date": "2024-06-10",
+        "temperature_healthy": 36.6,
+        "temperature_healthy_kelvin": 309.75,
+        "temperature_sick": 39.8,
+        "temperature_sick_kelvin": 312.95
+    },
+    "day2": {
+        "date": "2024-06-11",
+        "temperature_healthy": 36.7,
+        "temperature_healthy_kelvin": 309.84999999999997,
+        "temperature_sick": 40.2,
+        "temperature_sick_kelvin": 313.34999999999997
+    },
+    "day3": {
+        "date": "2024-06-12",
+        "temperature_healthy": 36.5,
+        "temperature_healthy_kelvin": 309.65,
+        "temperature_sick": 40.0,
+        "temperature_sick_kelvin": 313.15
+    },
+    "day4": {
+        "date": "2024-06-13",
+        "temperature_healthy": 36.8,
+        "temperature_healthy_kelvin": 309.95,
+        "temperature_sick": 39.6,
+        "temperature_sick_kelvin": 312.75
+    },
+    "day5": {
+        "date": "2024-06-14",
+        "temperature_healthy": 36.9,
+        "temperature_healthy_kelvin": 310.04999999999995,
+        "temperature_sick": 40.3,
+        "temperature_sick_kelvin": 313.45
+    },
+    "day6": {
+        "date": "2024-06-15",
+        "temperature_healthy": 36.6,
+        "temperature_healthy_kelvin": 309.75,
+        "temperature_sick": 40.5,
+        "temperature_sick_kelvin": 313.65
+    },
+    "day7": {
+        "date": "2024-06-16",
+        "temperature_healthy": 36.7,
+        "temperature_healthy_kelvin": 309.84999999999997,
+        "temperature_sick": 39.9,
+        "temperature_sick_kelvin": 313.04999999999995
+    }
+}

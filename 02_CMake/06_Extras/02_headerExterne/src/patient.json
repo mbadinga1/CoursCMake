@@ -1,0 +1,37 @@
+{
+    "day1": {
+        "date": "2024-06-10",
+        "temperature_healthy": 36.6,
+        "temperature_sick": 39.8
+    },
+    "day2": {
+        "date": "2024-06-11",
+        "temperature_healthy": 36.7,
+        "temperature_sick": 40.2
+    },
+    "day3": {
+        "date": "2024-06-12",
+        "temperature_healthy": 36.5,
+        "temperature_sick": 40.0
+    },
+    "day4": {
+        "date": "2024-06-13",
+        "temperature_healthy": 36.8,
+        "temperature_sick": 39.6
+    },
+    "day5": {
+        "date": "2024-06-14",
+        "temperature_healthy": 36.9,
+        "temperature_sick": 40.3
+    },
+    "day6": {
+        "date": "2024-06-15",
+        "temperature_healthy": 36.6,
+        "temperature_sick": 40.5
+    },
+    "day7": {
+        "date": "2024-06-16",
+        "temperature_healthy": 36.7,
+        "temperature_sick": 39.9
+    }
+}

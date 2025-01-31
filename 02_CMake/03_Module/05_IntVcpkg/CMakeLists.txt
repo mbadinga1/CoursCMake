@@ -1,0 +1,73 @@
+# creer un dossier build  et entrer dans le dossier 
+# mkdir build && cd build
+# lancer la config
+# cmake ..
+# lancer build 
+# make ou cmake --build . 
+# lancer l'executable
+# ./Exec
+cmake_minimum_required(VERSION 3.22)
+project(CppProject
+        VERSION 1.0.0
+        DESCRIPTION "Conversion de temperature"
+        LANGUAGES C CXX
+        )
+set(${CMAKE_BUILD_TYPE} Debug)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_EXTENSIONS OFF)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(EXEC_NAME Executable)
+set(LIB_NAME LibK)
+set(LIB_FAHREN LibF)
+set(INSTALL_PATH "/usr/local/" CACHE PATH "chemin pour installer le binaire")
+
+option(COMPILE_APP "compile code application" ON)
+option(ENABLE_DEBUG "Activer le debug" OFF)
+option(ENABLE_CPM "enable cmp" OFF)
+option(ENABLE_CONAN "enable conan" OFF)
+option(ENABLE_VCPKG "enable vcpkg" ON)
+
+
+# list(APPEND CMAKE_PREFIX_PATH  "${CMAKE_SOURCE_DIR}/external/nlohmann_json/cmake")
+# find_package(nlohmann_json 3.11.3 REQUIRED)
+
+if (ENABLE_CPM)
+        include(cmake/CPM.cmake)
+        CPMAddPackage("gh:fmtlib/fmt#11.0.2")
+        CPMAddPackage("gh:catchorg/Catch2@3.4.0")
+elseif(ENABLE_VCPKG)
+        include(./external/vcpkg/scripts/buildsystems/vcpkg.cmake)
+        find_package(fmt CONFIG REQUIRED)
+        find_package(Catch2 CONFIG REQUIRED)
+        find_package(nlohmann_json CONFIG REQUIRED)
+elseif(ENABLE_CONAN)
+        include(${CMAKE_BINARY_DIR}/build/Debug/generators/conan_toolchain.cmake)
+        find_package(fmt REQUIRED)
+        find_package(Catch2  REQUIRED)
+else()
+        include(FetchContent)
+        FetchContent_Declare(
+                fmt
+                GIT_REPOSITORY https://github.com/fmtlib/fmt
+                GIT_TAG 11.0.2
+                GIT_SHALLOW TRUE)
+        FetchContent_MakeAvailable(fmt)
+endif()
+
+
+if(ENABLE_DEBUG)
+        message(STATUS "Mode debug activé")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g")
+else()
+        message(STATUS "Mode debug desactivé")
+        set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2")
+endif()
+
+add_subdirectory(configure)
+if(COMPILE_APP)
+        add_subdirectory(app)
+endif()
+add_subdirectory(src)
+
+

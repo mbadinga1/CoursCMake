@@ -1,7 +1,12 @@
 #include "kelvin.h"
 
-int main(void)
+
+int main (void)
 {
-    hello();
-    return 0;
+    // conversion C en K 
+    double C = 22.15; 
+    double K =  convCelsiusEnKevin(C);
+    printTemperature(C, K); 
+    return EXIT_SUCCESS; 
+
 }

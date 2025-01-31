@@ -1,0 +1,8 @@
+set(BUILD_LIST "core,imgcodecs,highgui" CACHE STRING "Modules essentiels seulement")
+set(BUILD_SHARED_LIBS OFF CACHE BOOL "Ne pas construire de bibliothèques partagées")
+set(BUILD_opencv_world OFF CACHE BOOL "Ne pas construire le paquet tout-en-un opencv_world")
+set(BUILD_opencv_python OFF CACHE BOOL "Désactiver le support Python")
+set(BUILD_opencv_apps OFF CACHE BOOL "Désactiver les applications OpenCV")
+set(BUILD_TESTS OFF CACHE BOOL "Désactiver les tests")
+set(BUILD_PERF_TESTS OFF CACHE BOOL "Désactiver les tests de performance")
+set(BUILD_DOCS OFF CACHE BOOL "Désactiver la documentation")

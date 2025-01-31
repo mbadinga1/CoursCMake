@@ -1,0 +1,19 @@
+{
+    "name": "cpppproject",
+    "version-string": "1.0.0",
+    "dependencies": [
+        {
+            "name": "fmt",
+            "version>=": "11.0.2"
+        },
+        {
+            "name": "catch2",
+            "version>=": "3.7.1"
+        },
+        {
+            "name": "nlohmann-json",
+            "version>=": "3.11.3"
+        }
+    ],
+    "builtin-baseline": "b8d688b979bd54f0269ea1c6101e6a977613175f"
+}

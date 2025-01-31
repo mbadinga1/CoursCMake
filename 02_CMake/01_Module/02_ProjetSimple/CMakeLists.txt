@@ -1,14 +1,23 @@
+#lancer le build
+# creer un dossier build et aller dans le dossier 
+# mkdir build && cd build
+# configurer et build
+# cmake ..
+# make ou cmake --build .
+# lancer executable
+# ./Exec
 
-# 1- creer un dossier build mkdir build
-# 2- cmake ..
-# 3- make / cmake --build .
+
 cmake_minimum_required(VERSION 3.22)
-project(
-    CppProject
-    VERSION 1.0.0
-    LANGUAGES C CXX)
+project(TemperatureProjet 
+        VERSION 1.0.0
+        DESCRIPTION "Conversion de température"
+        LANGUAGES C CXX
+        )
+set(EXEC_NAME Exec)
+set(LIB_KELVIN Library)
 
-add_library(Librarie STATIC lib.cpp)
-add_executable(Exec main.cpp)
-target_link_libraries(Exec PUBLIC Librarie)
+add_library(${LIB_KELVIN} STATIC kelvin.cpp)
+add_executable(${EXEC_NAME} main.cpp)
+target_link_libraries(${EXEC_NAME} ${LIB_KELVIN})
 
